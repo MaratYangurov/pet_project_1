@@ -89,20 +89,26 @@ background-repeat: no-repeat;
 
 .header_n__right {
 display: flex;
-align-items: stretch;
 justify-content: space-between;
+align-items: stretch;
+
 flex: 1;
 position: relative;
+flex-direction: row;
 }
 
 .header_n__left-group {
 max-width: 371px;
+
 flex-wrap: nowrap;
 flex: 1;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 }
+
+
+
 
 /*.mob-hidden {
 display: none;
@@ -126,6 +132,9 @@ flex-direction: column;
 align-items: flex-end;
 }
 
-.mob-hidden {
-display: none;
-}
+.header_n-menu-item__link {
+  font-size: 13px;
+  line-height: 1;
+  color: #121318;
+  font-weight: 500;
+  white-space: nowrap; }

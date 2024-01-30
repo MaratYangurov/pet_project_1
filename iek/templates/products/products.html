@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Общий список товаров!</h1>
+
+    {% for el in products_modular_av %}
+        <ul>
+            <li>
+                <a href="{% url 'products:products'  %}" target="_blank">Артикл: {{ el.articl }}</a>
+            </li>
+            <li>
+                Описание: {{ el.description_product }}
+            </li>
+            <li>
+                Так номинальный: {{ el.i_nom }}A
+            </li>
+            <li>
+                Количество полюсов: {{ el.polus }}
+            </li>
+            <li>
+                Время-токовая характеристика: {{ el.current_time_curve }}
+            </li>
+            <li>
+                Тип напряжения: {{ el.voltage_type }}
+            </li>
+            <li>
+                Напряжение номинальное: {{ el.voltage_nom }}
+            </li>
+            <li>
+                Номин отключающая способность при коротком замыкании: {{ el.i_cn }}кА
+            </li>
+        </ul>
+
+        {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+
 {% endblock %}
 
 <!--
